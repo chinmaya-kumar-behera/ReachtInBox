@@ -67,13 +67,15 @@ import React, { useEffect, useState } from "react";
 import IconBar from "@/views/dashboard/IconBar";
 import { useSelector } from "react-redux";
 import ItsTheBegining from "@/views/dashboard/ItsTheBegining";
+import EmailList from "@/views/dashboard/EmailList";
+import EmailContainer from "@/views/dashboard/EmailContainer";
 
 const EmailComponent = () => {
   return (
     <React.Fragment>
       <ContainerLayout
-        leftContent={<div>Left content</div>}
-        rightContent={<div>Right content</div>}
+        leftContent={<EmailList />}
+        rightContent={<EmailContainer />}
       />
     </React.Fragment>
   );

@@ -9,11 +9,11 @@ const ContainerLayout = ({ leftContent, rightContent }) => {
   };
 
   return (
-    <div className="flex max-w-full">
+    <div className="flex max-w-full h-[calc(100vh-70px)] overflow-auto no-scrollbar">
       {/* left section */}
       <div
-        className={`hidden lg:block h-full transition-all duration-300 sticky top-[65px]  ${
-          isCollapsed ? "w-12" : "w-[270px]"
+        className={`hidden lg:block h-full transition-all duration-300 sticky top-[65px] border-r border-gray-500 bg-[#010001] ${
+          isCollapsed ? "w-12" : "w-[340px]"
         }`}
       >
         {/* toggle button */}
@@ -23,13 +23,11 @@ const ContainerLayout = ({ leftContent, rightContent }) => {
         >
           {isCollapsed ? <IoIosArrowBack /> : <IoIosArrowForward />}
         </button>
-        <div className="h-[calc(100vh-70px)] flex-1 py-4 pl-2 border-r border-gray">
-          {leftContent}
-        </div>
+        {leftContent}
       </div>
 
       {/* right section */}
-      <div className="flex-1 p-4 space-y-10 max-w-full lg:max-w-[calc(100vw-270px)]">
+      <div className="flex-1 max-w-full lg:max-w-[calc(100vw-340px)] bg-[#010001]">
         {rightContent}
       </div>
     </div>
