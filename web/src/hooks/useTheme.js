@@ -2,14 +2,13 @@
 import { useState, useEffect } from "react";
 
 const useTheme = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
       setTheme(storedTheme);
     } else {
-      // Default to system preference
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
