@@ -1,6 +1,5 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
-// import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import Divider from "@/components/shared/Divider";
 import Button from "@/components/ui/Button";
